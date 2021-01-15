@@ -1,0 +1,17 @@
+name: selfdistill
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ipywidgets=7.5.1=py_1
+  - jupyterlab=2.2.6=py_0
+  - matplotlib=3.3.2=0
+  - numpy=1.19.2=py37h456fd55_0
+  - pip=20.3.1=py37hecd8cb5_0
+  - python=3.7.0=hc167b69_0
+  - scikit-learn=0.23.2=py37h959d312_0
+  - pip:
+    - pytorch-lightning==1.1.1
+    - tensorboard==2.4.0
+    - torch==1.7.1
+    - torchvision==0.8.2
