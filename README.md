@@ -26,7 +26,7 @@ python self_distiller.py \
 --resnet 50 \
 --lr 1e-4
 ```
-Note, a large variety of options exist, both for training and network specifications, but the main interest of this paper has been on evaluating the affect of different `alpha` during multiple distillation steps. See our paper for more details.
+Note, a large variety of options exist, both for training and network specifications, but the main interest of this paper has been on evaluating the effect of different `alpha` during multiple distillation steps. See our paper for more details.
 
 ## Illustrative example
 The data we are using is identical to that of Mobahi (2020) and is 11 points simulated from a sinusoid plus some normally distributed noise. Initially, we perform self-distillation without the ground-truth (i.e. `alpha = 0`) with the RBF kernel with `gamma=80` and `lambd = 2e-1`. This is somewhat comparable to Mobahi (2020), with a different kernel. The first fit, the following five distillation steps and the limiting solution (zero-function) can be seen below.
