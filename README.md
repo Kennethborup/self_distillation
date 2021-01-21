@@ -1,5 +1,5 @@
 # Self-Distillation with ResNet and Kernel Ridge Regression
-The following repository contains the code to replicate the toy-example ([`toy_example.ipynb`](toy_example.ipynb)) from our self-distillation paper _"Do not Blindly Trust your Teacher: Ground-Truth Targets Dampens Regularization Imposed by Self-Distillation"_, and code to reproduce our experiments with CIFAR-10 and ResNets ([`self_distiller.py`](self_distiller.py)).
+The following repository contains the code to replicate the toy-example ([`toy_example.ipynb`](toy_example.ipynb)) from our self-distillation paper _"Even your Teacher Needs Guidance: Ground-Truth Targets Dampens Regularization Imposed by Self-Distillation"_, and code to reproduce our experiments with CIFAR-10 and ResNets ([`self_distiller.py`](self_distiller.py)).
 
 ![](figures/self_distill.png)
 
