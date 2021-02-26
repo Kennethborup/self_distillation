@@ -66,9 +66,12 @@ Furthermore, if one were to continue the distillation procedure, the first examp
 ## Citation
 If you find this repository and/or paper useful for your research, please consider citing the paper:
 ```{bibtex}
-@misc{borup2021eventeacher,
-      title={Even your Teacher Needs Guidance: Ground-Truth Targets Dampens Regularization Imposed by Self-Distillation}, 
+@misc{borup2021teacher,
+      title={Even your Teacher Needs Guidance: Ground-Truth Targets Dampen Regularization Imposed by Self-Distillation}, 
       author={Kenneth Borup and Lars N. Andersen},
-      year={2021}
+      year={2021},
+      eprint={2102.13088},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
