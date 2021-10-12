@@ -37,7 +37,7 @@ Now if we keep the same settings, except setting `alpha = 0.35`, then we see tha
 
 ![](figures/distill_GT.png)
 
-If we compare the losses associated to the above two procedures, we notice, how the former changes drastically between each iteration, whereas the latter is much more stable. Furthermore, the second actually improves performance in all distillation steps, compared to the original, whereas the former performs worse for all distillation steps. Note, the reported loss is w.r.t. the underlying sinusoid and not the training data.
+If we compare the losses associated to the above two procedures, we notice, how the former changes drastically between each iteration, whereas the latter is much more stable. Furthermore, the second actually improves performance in all six distillation steps, compared to the first fit, whereas the former performs worse for some distillation steps. Note, the reported loss is w.r.t. the underlying (true) sinusoid and not the training data.
 
 Step  | Loss (`alpha = 0`) | Loss (`alpha = 0.35`)
 :---: | :---               | :---
@@ -50,10 +50,10 @@ Step  | Loss (`alpha = 0`) | Loss (`alpha = 0.35`)
 ...   | ...                | ...
 ∞     | 0.49505            | **0.14959**
 
-Note, the limiting solution in the `alpha = 0.35` case yields the best performance of all distillation steps. Furthermore, whereas the initial experiment (`alpha = 0.0`) imposed increased regularization at each iteration, the latter case (`alpha = 0.35`) allow for an adapted regularization, and eventually, will obtain the best solution after enough iterations (due to the linear convergence of the limit, we experience that the solution converge quite quickly to the limit; i.e. typically in 10-20 iterations).
+Note, the limiting solution in the `alpha = 0.35` case yields comparable performance to that obtained after 5-6 distillation steps, but is computable without the explicit distillation of the model. Furthermore, whereas the initial experiment (`alpha = 0.0`) imposed increased regularization at each iteration, the latter case (`alpha = 0.35`) allow for an adapted regularization, and eventually obtain the better solution after enough iterations (due to the linear convergence of the limit, we experience that the solution converge quite quickly to the limit; i.e. typically in 10-20 iterations).
 
 ### Sparsification of solution
-In was shown in Mobahi (2020) that the solution sparsifies with each distillation step when `alpha = 0`, and we have extended this result to include all alpha in [0,1]. For `alpha = 1`, the result is not interesting, but the remaining cases are. If we calculate the diagonal B matrices for the above examples and plot the diagonal for each step, we get the following two plots.
+It was shown in Mobahi (2020) that the solution sparsifies with each distillation step when `alpha = 0`, and we have extended this result to include all alpha in [0,1]. For `alpha = 1`, the result is not interesting, but the remaining cases are. If we calculate the diagonal B matrices for the above examples and plot the diagonal for each step, we get the following two plots.
 
 First for `alpha = 0`, we see that the smaller diagonals decrease faster than the larger diagonals.
 ![](figures/B_no_GT.png)
@@ -66,5 +66,12 @@ Furthermore, if one were to continue the distillation procedure, the first examp
 ## Citation
 If you find this repository and/or paper useful for your research, please consider citing the paper:
 ```{bibtex}
--- Redacted for review --
+@misc{borup2021teacher,
+      title={Even your Teacher Needs Guidance: Ground-Truth Targets Dampen Regularization Imposed by Self-Distillation}, 
+      author={Kenneth Borup and Lars N. Andersen},
+      year={2021},
+      eprint={2102.13088},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
