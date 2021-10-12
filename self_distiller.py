@@ -177,7 +177,7 @@ class CIFAR10DataModule(pl.LightningDataModule):
 
 
 # Parse arguments
-parser = argparse.ArgumentParser(prog='Mobahi', description='Replication of Mobahi')
+parser = argparse.ArgumentParser(prog='Self-distill', description='Self-distill')
 
 # add PROGRAM level args
 parser.add_argument('--seed', type=int, default=None)
