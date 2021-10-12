@@ -33,13 +33,13 @@ The data we are using is identical to that of Mobahi (2020) and is 11 points sim
 
 ![](figures/distill_no_GT.png)
 
-Now if we keep the same settings, except setting `alpha = 0.35`, then we see that the inclusion of the ground-truth dampens the regularization imposed by the distillation procedure, and we obtain a much more stable distillation procedure. Furthermore, the solutions no longer converge to the zero-function, but rather to some non-zero solution.
+Now if we keep the same settings, except setting `alpha = 0.25`, then we see that the inclusion of the ground-truth dampens the regularization imposed by the distillation procedure, and we obtain a much more stable distillation procedure. Furthermore, the solutions no longer converge to the zero-function, but rather to some non-zero solution.
 
 ![](figures/distill_GT.png)
 
 If we compare the losses associated to the above two procedures, we notice, how the former changes drastically between each iteration, whereas the latter is much more stable. Furthermore, the second actually improves performance in all six distillation steps, compared to the first fit, whereas the former performs worse for some distillation steps. Note, the reported loss is w.r.t. the underlying (true) sinusoid and not the training data.
 
-Step  | Loss (`alpha = 0`) | Loss (`alpha = 0.35`)
+Step  | Loss (`alpha = 0`) | Loss (`alpha = 0.25`)
 :---: | :---               | :---
 1	    | 0.16477            | 0.16477
 2	    | 0.15076            | 0.15424
